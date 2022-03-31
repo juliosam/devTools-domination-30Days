@@ -19,27 +19,73 @@
 
     // Regular
 
+    console.log('hello')
+
     // Interpolated
+
+    console.log('hello i am a %s string!', '+poo')
 
     // Styled
 
+    console.log('%c hello i am a great string', 'font-size:40px; color:green; background-color:yellow')
+
     // warning!
+    console.warn("calm down sir");
 
     // Error :|
 
+    console.error("i warned you sir...")
+
     // Info
+
+    console.info('Napoleon wasnt that short')
 
     // Testing
 
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong you stupid!')
+
+    
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
 
+    console.log(p);
+    console.dir(p)
+
     // Grouping together
+
+    dogs.forEach(e =>{
+      console.groupCollapsed(`${e.name} `)
+      console.log(`This is ${e.name} `)
+      console.log(`${e.name} is ${e.age} years old `)
+      console.log(`That is ${e.age*7} dog years`)
+      console.groupEnd(`${e.name} `)
+    })
 
     // counting
 
+    console.count('Julio')
+    console.count('Rafael')
+    console.count('Julio')
+    console.count('Julio')
+
     // timing
+
+    console.time('whatever')
+
+    let counter = 1 ;
+
+    for(let count=0; count<200000000; count++){
+      counter++
+    }
+
+
+    console.timeEnd('whatever')
+
+    console.table(dogs)
 
   </script>
 </body>
